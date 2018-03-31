@@ -41,4 +41,55 @@ public class ReportController {
             return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @RequestMapping(value = "/centralized_report", method = RequestMethod.GET)
+    public ResponseEntity<?> downloadCentralizedDatababseReport(HttpServletResponse response) {
+        try {
+            XSSFWorkbook workbook=null;
+            response.setContentType("application/vnd.ms-excel");
+            response.setHeader("Content-Disposition", "attachment; filename= centralized_database.xlsx");
+            workbook = reportService.getCentralizedDatabaseReport();
+            workbook.write(response.getOutputStream());
+            workbook.close();
+            return ResponseEntity.ok("working");
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @RequestMapping(value = "/user_report", method = RequestMethod.GET)
+    public ResponseEntity<?> userReport(HttpServletResponse response) {
+        try {
+            XSSFWorkbook workbook=null;
+            response.setContentType("application/vnd.ms-excel");
+            response.setHeader("Content-Disposition", "attachment; filename= user_report.xlsx");
+            workbook = reportService.getUsersReport();
+            workbook.write(response.getOutputStream());
+            workbook.close();
+            return ResponseEntity.ok("working");
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @RequestMapping(value = "/feedback_report", method = RequestMethod.GET)
+    public ResponseEntity<?> feedbackReport(HttpServletResponse response) {
+        try {
+            XSSFWorkbook workbook=null;
+            response.setContentType("application/vnd.ms-excel");
+            response.setHeader("Content-Disposition", "attachment; filename= feedback_report.xlsx");
+            workbook = reportService.getFeedbackReport();
+            workbook.write(response.getOutputStream());
+            workbook.close();
+            return ResponseEntity.ok("working");
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+            return new ResponseEntity(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 }

@@ -145,7 +145,7 @@
                                     <h4 class="card-title">Feedback Form</h4>
                                     <!--Text-->
                                     <p class="card-text">Download user feedback details</p>
-                                    <a  class="btn btn-primary btn-md">Download
+                                    <a  onclick="feedback();" class="btn btn-primary btn-md">Download
                                         <i class="fa fa-download ml-2"></i>
                                     </a>
                                 </div>
@@ -165,7 +165,7 @@
                                     <h4 class="card-title">Centralized Database</h4>
                                     <!--Text-->
                                     <p class="card-text">Central database containing information of users filling annual returns. </p>
-                                    <a class="btn btn-primary btn-md">Download
+                                    <a onclick="centralized();" class="btn btn-primary btn-md">Download
                                         <i class="fa fa-download ml-2"></i>
                                     </a>
                                 </div>
@@ -182,7 +182,7 @@
                                     <h4 class="card-title">Registered Users</h4>
                                     <!--Text-->
                                     <p class="card-text">Download details of users registered on E-Labour Delhi</p>
-                                    <a href="https://mdbootstrap.com/vue/" target="_blank" class="btn btn-primary btn-md">Download
+                                    <a onclick="userReport();" class="btn btn-primary btn-md">Download
                                         <i class="fa fa-download ml-2"></i>
                                     </a>
                                 </div>
@@ -215,6 +215,57 @@
             }
         });
     }
+
+     function centralized() {
+
+            $.ajax({
+                url : "/report/centralized_report",
+                type: "GET",
+                data : "",
+                success: function(data)
+                {
+                    window.location = '/report/centralized_report';
+                },
+                error: function(xhr, status, error) {
+                    alert(xhr.responseText);
+
+                }
+            });
+        }
+
+        function userReport() {
+
+                    $.ajax({
+                        url : "/report/user_report",
+                        type: "GET",
+                        data : "",
+                        success: function(data)
+                        {
+                            window.location = '/report/user_report';
+                        },
+                        error: function(xhr, status, error) {
+                            alert(xhr.responseText);
+
+                        }
+                    });
+                }
+
+        function feedback() {
+
+                            $.ajax({
+                                url : "/report/feedback_report",
+                                type: "GET",
+                                data : "",
+                                success: function(data)
+                                {
+                                    window.location = '/report/feedback_report';
+                                },
+                                error: function(xhr, status, error) {
+                                    alert(xhr.responseText);
+
+                                }
+                            });
+                        }
 
 
     </script>

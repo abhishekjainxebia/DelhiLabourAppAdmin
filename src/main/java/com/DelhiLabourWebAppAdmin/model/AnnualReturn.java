@@ -30,6 +30,10 @@ public class AnnualReturn {
 
     private String registration_number;
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    private RegisterPOJO register;
+
     public String getAct_name() {
         return act_name;
     }

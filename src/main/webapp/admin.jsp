@@ -63,7 +63,6 @@ $( document ).ready(function() {
 			dataType : 'json',
 			success : function(result) {
 
-
 			    if(result.responseText=="dashboard")
 				  window.location.href = "dashboard.jsp";
 

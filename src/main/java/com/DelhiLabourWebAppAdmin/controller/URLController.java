@@ -26,36 +26,6 @@ public class URLController  {
 
 
 
-    @RequestMapping(value = "/ServletRegister", method = RequestMethod.GET)
-    public String registration(Model model) {
-        model.addAttribute("userForm", "some data to be sent");
-        return "redirect:error";
-    }
-
-
-
-    @RequestMapping("/faqs")
-    public String faqs(){
-        return "static/faqs";
-    }
-
-    @RequestMapping("/help")
-    public String help(){
-        return "static/help";
-    }
-
-    @RequestMapping("/careers")
-    public String career(){
-        return "static/career";
-    }
-
-    @RequestMapping("/acts")
-    public String acts()
-    {
-        return "/acts";
-    }
-
-
 }
 
 

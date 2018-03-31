@@ -14,12 +14,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap core CSS -->
-    <link href="dashboard/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="dashboard/css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
-    <link href="dashboard/css/style.min.css" rel="stylesheet">
-    <link rel="icon" href="homepage/img/labor-man.png" type="image/ico" sizes="16x16">
+    <link href="css/style.min.css" rel="stylesheet">
+    <link rel="icon" href="img/labor-man.png" type="image/ico" sizes="16x16">
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script>
 
@@ -30,9 +30,57 @@
 <body class="fixed-sn navy-blue-skin">
 
 
-                        <a  target="_self" onclick="logout();" class="nav-link border border-light rounded waves-effect">
-                            </i>LOGOUT
+<!--Main Navigation-->
+<header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand waves-effect">
+                <strong class="blue-text">E-LABOUR DELHI ADMIN</strong>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link waves-effect" href="#">Dashboard
+                            <span class="sr-only">(current)</span>
                         </a>
+                    </li>
+
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+
+                    <li class="nav-item">
+                        <a  target="_self" onclick="logout();" class="nav-link border border-light rounded waves-effect">
+                            LOGOUT
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+</header>
+
+
+
 
                     <script>
 
@@ -44,25 +92,110 @@
                     </script>
 
 
+<main class="mt-5 pt-5">
+    <div class="container">
+
+        <!--Section: Jumbotron-->
+
+        <hr class="my-5">
+
+        <!--Section: Cards-->
+        <section class="text-center">
+
+            <!--Grid row-->
+            <div class="row mb-4 wow fadeIn">
 
 
-    <!-- Sidebar -->
-    <div class="sidebar-fixed position-fixed">
 
-        <a class="logo-wrapper waves-effect">
+            <!--Grid row-->
+                <table border="0px">
 
-        </a>
+                    <tr>
+                        <td>
 
-        <div class="list-group list-group-flush">
+                                <!--Card-->
+                                <div class="card">
 
-            <a id="annual" onclick="annual();" class="list-group-item list-group-item-action waves-effect">
-                <i class="fa fa-map mr-3"></i>DOWNLOAD ANNUAL RETURN REPORT</a>
 
-        </div>
+
+                                    <!--Card content-->
+                                    <div class="card-body">
+                                        <!--Title-->
+                                        <h4 class="card-title"><Annual></Annual> Return</h4>
+                                        <!--Text-->
+                                        <p class="card-text">Download xlsx file of annual return </p>
+                                        <a onclick="annual();" class="btn btn-primary btn-md">Download
+                                            <i class="fa fa-download ml-2"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <!--/.Card-->
+
+                        </td>
+
+                        <td>
+                            <div class="card">
+
+
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <!--Title-->
+                                    <h4 class="card-title">Feedback Form</h4>
+                                    <!--Text-->
+                                    <p class="card-text">Download user feedback details</p>
+                                    <a  class="btn btn-primary btn-md">Download
+                                        <i class="fa fa-download ml-2"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card">
+
+
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <!--Title-->
+                                    <h4 class="card-title">Centralized Database</h4>
+                                    <!--Text-->
+                                    <p class="card-text">Central database containing information of users filling annual returns. </p>
+                                    <a class="btn btn-primary btn-md">Download
+                                        <i class="fa fa-download ml-2"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </td>
+
+                        <td>
+                            <div class="card">
+
+                                <!--Card content-->
+                                <div class="card-body">
+                                    <!--Title-->
+                                    <h4 class="card-title">Registered Users</h4>
+                                    <!--Text-->
+                                    <p class="card-text">Download details of users registered on E-Labour Delhi</p>
+                                    <a href="https://mdbootstrap.com/vue/" target="_blank" class="btn btn-primary btn-md">Download
+                                        <i class="fa fa-download ml-2"></i>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+        </section>
+        <!--Section: Cards-->
 
     </div>
-
-
+</main>
     <script type="text/javascript">
 
 
@@ -169,13 +302,13 @@
 
 <!-- SCRIPTS -->
 <!-- JQuery -->
-<script type="text/javascript" src="homepage/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <!-- Bootstrap tooltips -->
-<script type="text/javascript" src="homepage/js/popper.min.js"></script>
+<script type="text/javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="homepage/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
-<script type="text/javascript" src="homepage/js/mdb.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
 <!-- Initializations -->
 <script type="text/javascript">
     // Animations initialization

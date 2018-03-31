@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <title>E-Labour Admin</title>
 <style>
 .login {
 
@@ -61,10 +62,17 @@ $( document ).ready(function() {
 			data : JSON.stringify(formData),
 			dataType : 'json',
 			success : function(result) {
-				window.location.href = "dashboard.jsp";
+
+
+			    if(result.responseText=="dashboard")
+				  window.location.href = "dashboard.jsp";
+
 			},
 			error : function(e) {
-				window.location.href = "dashboard.jsp";
+
+                if(e.responseText=="dashboard")
+                    window.location.href = "dashboard.jsp";
+				// window.location.href = "dashboard.jsp";
 			}
 		});
 

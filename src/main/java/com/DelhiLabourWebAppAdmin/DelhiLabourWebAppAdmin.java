@@ -1,4 +1,4 @@
-package com.hellokoding.springboot;
+package com.DelhiLabourWebAppAdmin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,14 +6,14 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class WebApplication extends SpringBootServletInitializer {
+public class DelhiLabourWebAppAdmin extends SpringBootServletInitializer {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(WebApplication.class);
+        return application.sources(DelhiLabourWebAppAdmin.class);
     }
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(WebApplication.class, args);
+        SpringApplication.run(DelhiLabourWebAppAdmin.class, args);
     }
 }
 
